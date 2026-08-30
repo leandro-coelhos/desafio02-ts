@@ -9,4 +9,9 @@ describe('login', () => {
         login()
         expect(mockAlert).toHaveBeenCalledWith('Bem vinda!')
     })
+
+    it('Deve exibir um alert com a mensagem diferente de "oi camarada"', () => {
+        login()
+        expect(mockAlert).not.toHaveBeenCalledWith('Oi camarada!')
+    })
 })
